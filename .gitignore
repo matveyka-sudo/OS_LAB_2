@@ -1,0 +1,8 @@
+.DS_Store
+.idea/
+__pycache__/
+*.pyc
+program/parent
+program/child1
+program/child2
+~$*

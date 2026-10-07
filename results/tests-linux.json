@@ -1,0 +1,136 @@
+{
+  "system": "Linux-7.0.0-31-generic-aarch64-with-glibc2.43",
+  "tests": [
+    {
+      "name": "ordinary",
+      "input_bytes": 22,
+      "output_bytes": 16,
+      "expected_bytes": 16,
+      "exit_code": 0,
+      "passed": true,
+      "output_preview": "HELLO MY FRIEND\n",
+      "stderr": "",
+      "output_sha256": "262a2415f5bb0901c1fde3bd770fcb01f579bda2182a00dcc446bc179858ec03"
+    },
+    {
+      "name": "single_spaces",
+      "input_bytes": 16,
+      "output_bytes": 16,
+      "expected_bytes": 16,
+      "exit_code": 0,
+      "passed": true,
+      "output_preview": "HELLO MY FRIEND\n",
+      "stderr": "",
+      "output_sha256": "262a2415f5bb0901c1fde3bd770fcb01f579bda2182a00dcc446bc179858ec03"
+    },
+    {
+      "name": "many_spaces",
+      "input_bytes": 88,
+      "output_bytes": 6,
+      "expected_bytes": 6,
+      "exit_code": 0,
+      "passed": true,
+      "output_preview": " A B \n",
+      "stderr": "",
+      "output_sha256": "094e5b146bef10002840f5fcc0090b42b2fe8173a39217cbf5b3f4354339e625"
+    },
+    {
+      "name": "multiple_lines",
+      "input_bytes": 38,
+      "output_bytes": 34,
+      "expected_bytes": 34,
+      "exit_code": 0,
+      "passed": true,
+      "output_preview": "HELLO WORLD\nSECOND LINE\nLAST LINE\n",
+      "stderr": "",
+      "output_sha256": "4cc737605564c15aa400638d1ba3213b91286989afcc7c01e02c7659e2cf9967"
+    },
+    {
+      "name": "empty_line",
+      "input_bytes": 1,
+      "output_bytes": 1,
+      "expected_bytes": 1,
+      "exit_code": 0,
+      "passed": true,
+      "output_preview": "\n",
+      "stderr": "",
+      "output_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "name": "spaces_only",
+      "input_bytes": 6,
+      "output_bytes": 2,
+      "expected_bytes": 2,
+      "exit_code": 0,
+      "passed": true,
+      "output_preview": " \n",
+      "stderr": "",
+      "output_sha256": "e16f1596201850fd4a63680b27f603cb64e67176159be3d8ed78a4403fdb1700"
+    },
+    {
+      "name": "long_5000",
+      "input_bytes": 5001,
+      "output_bytes": 4287,
+      "expected_bytes": 4287,
+      "exit_code": 0,
+      "passed": true,
+      "output_preview": "AB CD AB CD AB CD AB CD AB CD AB CD AB CD AB CD AB CD AB CD AB CD AB CD AB CD AB",
+      "stderr": "",
+      "output_sha256": "8059a8250ce6b8a55a2d01f1ec785135bbebca0b1c5f2565165b25bbc4ddd148"
+    },
+    {
+      "name": "long_200000",
+      "input_bytes": 200002,
+      "output_bytes": 200002,
+      "expected_bytes": 200002,
+      "exit_code": 0,
+      "passed": true,
+      "output_preview": "AB AB AB AB AB AB AB AB AB AB AB AB AB AB AB AB AB AB AB AB AB AB AB AB AB AB AB",
+      "stderr": "",
+      "output_sha256": "e7d20e55ff446c7c3a3eb8cb280d0c691f74e2f35dd2ed0ec07c3bbe75791274"
+    },
+    {
+      "name": "final_without_newline",
+      "input_bytes": 13,
+      "output_bytes": 9,
+      "expected_bytes": 9,
+      "exit_code": 0,
+      "passed": true,
+      "output_preview": "LAST LINE",
+      "stderr": "",
+      "output_sha256": "4bc9bc89c44eccd693086aa5fcc489a9d6bf9052afb5de829e5b348c3ae128be"
+    },
+    {
+      "name": "empty_input",
+      "input_bytes": 0,
+      "output_bytes": 0,
+      "expected_bytes": 0,
+      "exit_code": 0,
+      "passed": true,
+      "output_preview": "",
+      "stderr": "",
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "tabs_preserved",
+      "input_bytes": 8,
+      "output_bytes": 7,
+      "expected_bytes": 7,
+      "exit_code": 0,
+      "passed": true,
+      "output_preview": "A\t\tB C\n",
+      "stderr": "",
+      "output_sha256": "496c057c46beae5ce2914a809b910871197352f3facedd516f6280701af8d89d"
+    },
+    {
+      "name": "child1",
+      "passed": true,
+      "exit_code": 0
+    },
+    {
+      "name": "child2",
+      "passed": true,
+      "exit_code": 0
+    }
+  ]
+}

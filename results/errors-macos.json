@@ -1,0 +1,18 @@
+[
+  {
+    "name": "missing_child1",
+    "passed": true,
+    "exit_code": 1,
+    "stderr": "execl child1: No such file or directory\nCannot read result from child2\nchild1 failed\n"
+  },
+  {
+    "name": "missing_child2",
+    "passed": true,
+    "exit_code": 1,
+    "stderr": "execl child2: No such file or directory\nCannot read result from child2\nstdout: Broken pipe\nchild1 failed\nchild2 failed\n"
+  },
+  {
+    "name": "output_before_eof",
+    "passed": true
+  }
+]
